@@ -54,7 +54,7 @@ const Chatbot = ({ closeChatbot }) => {
         console.log('API call to send money');
 
         try {
-            const response = await axios.post('http://localhost:8000/api/singlesend', {
+            const response = await axios.post(`${process.env.REACT_APP_API}/singlesend`, {
                 userId,
                 receiverpublicKey: publicKey,
                 amount: amount

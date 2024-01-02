@@ -23,7 +23,7 @@ export default function Login() {
         e.preventDefault();
 
         try {
-            const response = await axios.post('http://localhost:8000/api/signin', {
+            const response = await axios.post(`${process.env.REACT_APP_API}/signin`, {
                 email: formData.email,
                 password: formData.password,
             });
